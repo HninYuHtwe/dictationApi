@@ -1,0 +1,18 @@
+{
+  "version": 2,
+  "name": "dictation-api",
+  "builds": [
+    {
+      "src": "server.js",
+      "use": "@vercel/node",
+      "config": {
+        "commands": [
+          {
+            "command": "npm install"
+          }
+        ]
+      }
+    }
+  ],
+  "routes": [{ "src": "/(.*)", "dest": "server.js" }]
+}
