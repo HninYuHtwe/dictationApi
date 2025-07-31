@@ -22,9 +22,9 @@ app.get('/', (req, res) => {
 // app.use('/audio', express.static(path.join(__dirname, 'public/audio')));
 // app.use('/pdf', express.static(path.join(__dirname, 'public/pdf')));
 
-// const routes = require('./src/routes');
+const routes = require('./src/routes');
 
-// app.use(routes);
+app.use(routes);
 
 app.use((req, res) => {
   res.status(404).json({
